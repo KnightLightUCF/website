@@ -1,0 +1,270 @@
+body {
+    /* background: linear-gradient(135deg, #000000, #1C1C1C, #333333, #4D4D4D); */
+    /* background: linear-gradient(135deg, #1f51ff, #4f9dff, #0073e6, #003366, #001f3f, #000000); */
+    /* background: linear-gradient(0deg, #000000 10%, #001f3f 30%, #003366 50%, #0073e6 70%, #4f9dff 90%, #1f51ff 100%); */
+    /* background: linear-gradient(180deg, #000000 10%, #4f9dff 50%, #000000 90%); */
+    /* background: linear-gradient(0deg, #000000, #001f3f, #003366, #0073e6, #4f9dff, #1f51ff); */
+    background: linear-gradient(180deg, #150c25 10%, #003366 35%, #0073e6 55%, #4f9dff 75%, #1f51ff 90%);
+
+
+    /* background-size: 400% 400%; */
+    /* animation: gradient 15s ease infinite; */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.transparent-text {
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.transparent-text::before {
+    content: "KnightLight";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+    filter: blur(10px);
+}
+
+.subtext {
+    font-size: 34px;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.top-right {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.top-button {
+    padding: 15px 25px;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+}
+
+.top-button:hover {
+    background: linear-gradient(135deg, #62cff4, #2c67f2);
+    transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 0 30px 15px rgba(44, 103, 242, 0.8);
+    transform: scale(1.05);
+}
+
+.top-button {
+    transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.tiny-button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.button-container {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 19px;
+    overflow: hidden;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px) saturate(200%);
+}
+
+.tiny-button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 8px;
+}
+
+.animation-container dotlottie-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.zero-margin {
+    margin: 0;
+}
+
+.button-container:nth-child(2):hover .animation-container {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+    transition: background 0.3s ease;
+}
+
+.button-container:nth-child(2):hover {
+    box-shadow: 0 0 15px 5px rgba(238, 42, 123, 0.6); /* Pink glow */
+}
+
+.button-container:nth-child(3):hover .animation-container {
+    background: linear-gradient(135deg, #88e188, #3ca55c);
+    transition: background 0.3s ease;
+}
+
+.button-container:nth-child(3):hover {
+    box-shadow: 0 0 15px 5px rgba(60, 165, 92, 0.6); /* Green glow */
+}
+
+.no-select {
+    user-select: none; /* Standard */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.icon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hide button image on hover */
+.button-container:hover .icon-overlay {
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .transparent-text {
+        font-size: 60px;
+    }
+
+    .subtext {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+
+    .top-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .top-right {
+        top: 20px;
+        right: 20px;
+    }
+
+    .bottom-left {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .button-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 16px;
+    }
+
+    .tiny-button-container {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transparent-text {
+        font-size: 60px;
+    }
+
+    .subtext {
+        font-size: 20px;
+    }
+
+    .top-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .button-container {
+        width: 35px;
+        height: 35px;
+        border-radius: 14px;
+    }
+}
