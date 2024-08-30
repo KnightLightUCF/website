@@ -1,3 +1,9 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
 body {
     /* background: linear-gradient(135deg, #000000, #1C1C1C, #333333, #4D4D4D); */
     /* background: linear-gradient(135deg, #1f51ff, #4f9dff, #0073e6, #003366, #001f3f, #000000); */
@@ -6,11 +12,8 @@ body {
     /* background: linear-gradient(0deg, #000000, #001f3f, #003366, #0073e6, #4f9dff, #1f51ff); */
     background: linear-gradient(180deg, #150c25 10%, #003366 35%, #0073e6 55%, #4f9dff 75%, #1f51ff 90%);
 
-
     /* background-size: 400% 400%; */
     /* animation: gradient 15s ease infinite; */
-    height: 100vh;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
